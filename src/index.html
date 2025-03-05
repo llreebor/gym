@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en" class="h-full">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+
+		<!-- Styles -->
+		<link rel="stylesheet" href="./css/output.css" />
+
+		<!-- Font -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body class="h-full">
+		<div class="wrapper flex min-h-full flex-col">
+			<!-- Main Content -->
+			<main class="h-full flex-auto py-20 max-md:py-[60px]">
+				<div class="container">
+					<div class="relative flex h-full gap-20 max-xl:gap-6 max-sm:gap-0">
+						<div class="w-full space-y-[60px] max-md:space-y-10">
+							<!-- Hero -->
+							<section>
+								<div class="relative overflow-hidden rounded-2xl">
+									<picture>
+										<source
+											srcset="./images/hero-mob.png"
+											media="(max-width: 768px)"
+										/>
+										<img
+											class="h-auto w-full max-w-full"
+											src="./images/hero-desktop.png"
+											alt="desktop image"
+										/>
+									</picture>
+								</div>
+
+								<h1 class="mt-6">Try a Free CrossFit Class</h1>
+								<p class="mt-2">
+									Join a high-energy class led by expert coaches and experience
+									the best community in fitness.
+								</p>
+							</section>
+
+							<!-- What to Expect? -->
+							<section>
+								<h2>What to Expect?</h2>
+
+								<ul class="mt-6 space-y-4">
+									<li>
+										<p class="inline-flex flex-wrap gap-2 text-gray-300">
+											<span
+												class="text-primary flex shrink-0 items-start gap-2 font-semibold"
+											>
+												<img src="./images/check-icon.svg" alt="check-icon" />
+												Warm-up:
+											</span>
+											Learn the fundamentals and prepare your body
+										</p>
+									</li>
+									<li>
+										<p class="inline-flex flex-wrap gap-2 text-gray-300">
+											<span
+												class="text-primary flex shrink-0 items-start gap-2 font-semibold"
+											>
+												<img src="./images/check-icon.svg" alt="check-icon" />
+												Workout:
+											</span>
+											Scaled for all skill levels—newcomers welcome
+										</p>
+									</li>
+									<li>
+										<p class="inline-flex flex-wrap gap-2 text-gray-300">
+											<span
+												class="text-primary flex shrink-0 items-start gap-2 font-semibold"
+											>
+												<img src="./images/check-icon.svg" alt="check-icon" />
+												Coaching:
+											</span>
+											Certified trainers to guide you every step
+										</p>
+									</li>
+									<li>
+										<p class="inline-flex flex-wrap gap-2 text-gray-300">
+											<span
+												class="text-primary flex shrink-0 items-start gap-2 font-semibold"
+											>
+												<img src="./images/check-icon.svg" alt="check-icon" />
+												Community:
+											</span>
+											Train with supportive , encouraging group
+										</p>
+									</li>
+									<li>
+										<p class="inline-flex flex-wrap gap-2 text-gray-300">
+											<span
+												class="text-primary flex shrink-0 items-start gap-2 font-semibold"
+											>
+												<img src="./images/check-icon.svg" alt="check-icon" />
+												No Commitment:
+											</span>
+											Just show up and have fun
+										</p>
+									</li>
+								</ul>
+							</section>
+						</div>
+						<div
+							class="w-full max-w-[472px] max-xl:max-w-[380px] max-md:hidden"
+						>
+							<div class="bg-primary sticky top-0 left-0 rounded py-20"></div>
+						</div>
+					</div>
+				</div>
+			</main>
+		</div>
+
+		<!-- JS -->
+		<script src="./js/main.js"></script>
+	</body>
+</html>
