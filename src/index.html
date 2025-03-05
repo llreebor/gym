@@ -8,6 +8,12 @@
 		<!-- Styles -->
 		<link rel="stylesheet" href="./css/output.css" />
 
+		<!-- Swiper -->
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+		/>
+
 		<!-- Font -->
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -108,6 +114,174 @@
 									</li>
 								</ul>
 							</section>
+
+							<!-- Coach -->
+							<section>
+								<div
+									class="flex items-center gap-10 max-md:flex-col max-md:gap-5"
+								>
+									<div
+										class="size-[200px] shrink-0 overflow-hidden rounded-full max-lg:size-[150px] max-md:size-[120px]"
+									>
+										<img src="./images/coach.png" alt="coach image" />
+									</div>
+
+									<div class="space-y-6 max-lg:space-y-5">
+										<h2 class="max-md:text-center">Meet Coach Kevin</h2>
+										<p class="max-md:text-center">
+											Kevin is an experience CrossFit Coach who is able to help
+											you meet your fitness goals during your time at Paul
+											Bunyan Fitness.
+										</p>
+									</div>
+								</div>
+							</section>
+
+							<!-- Location -->
+							<section>
+								<div class="space-y-6">
+									<h2>Gym location</h2>
+									<img src="./images/map.png" alt="map image" />
+								</div>
+							</section>
+
+							<!-- See how the training looks -->
+							<section>
+								<div class="space-y-6">
+									<h2>See how the training looks</h2>
+									<img src="./images/map.png" alt="map image" />
+								</div>
+							</section>
+
+							<!-- What our clients are saying ? -->
+							<section>
+								<div class="space-y-6">
+									<h2>What our clients are saying ?</h2>
+									<!-- Slider main container -->
+									<div class="swiper testimonials-swiper w-full max-w-[688px]">
+										<!-- Additional required wrapper -->
+										<div class="swiper-wrapper pb-12">
+											<!-- Slides -->
+											<div class="swiper-slide">
+												<div class="space-y-4">
+													<div class="flex items-center gap-3">
+														<div
+															class="size-12 overflow-hidden rounded-full bg-gray-200"
+														>
+															<img
+																src="./images/mock-avatar.svg"
+																alt="avatar"
+															/>
+														</div>
+
+														<p class="font-semibold text-gray-500">Darren B.</p>
+													</div>
+
+													<div class="flex items-center gap-2">
+														<img src="./images/stars.svg" alt="stars image" />
+														<p class="text-sm font-semibold text-yellow-400">
+															5.0
+														</p>
+													</div>
+
+													<p class="text-gray-300">
+														Best gym in Newtown Square, hands down! Amazing
+														coaches, great community, and a fantastic facility.
+														Best gym in Newtown Square, hands down! Amazing
+														coaches, great community, and a fantastic facility.
+													</p>
+												</div>
+											</div>
+											<div class="swiper-slide">
+												<div class="space-y-4">
+													<div class="flex items-center gap-3">
+														<div
+															class="size-12 overflow-hidden rounded-full bg-gray-200"
+														>
+															<img
+																src="./images/mock-avatar.svg"
+																alt="avatar"
+															/>
+														</div>
+
+														<p class="font-semibold text-gray-500">Darren B.</p>
+													</div>
+
+													<div class="flex items-center gap-2">
+														<img src="./images/stars.svg" alt="stars image" />
+														<p class="text-sm font-semibold text-yellow-400">
+															5.0
+														</p>
+													</div>
+
+													<p class="text-gray-300">
+														Best gym in Newtown Square, hands down! Amazing
+														coaches, great community, and a fantastic facility.
+													</p>
+												</div>
+											</div>
+											<div class="swiper-slide">
+												<div class="space-y-4">
+													<div class="flex items-center gap-3">
+														<div
+															class="size-12 overflow-hidden rounded-full bg-gray-200"
+														>
+															<img
+																src="./images/mock-avatar.svg"
+																alt="avatar"
+															/>
+														</div>
+
+														<p class="font-semibold text-gray-500">Darren B.</p>
+													</div>
+
+													<div class="flex items-center gap-2">
+														<img src="./images/stars.svg" alt="stars image" />
+														<p class="text-sm font-semibold text-yellow-400">
+															5.0
+														</p>
+													</div>
+
+													<p class="text-gray-300">
+														Best gym in Newtown Square, hands down! Amazing
+														coaches, great community, and a fantastic facility.
+													</p>
+												</div>
+											</div>
+											<div class="swiper-slide">
+												<div class="space-y-4">
+													<div class="flex items-center gap-3">
+														<div
+															class="size-12 overflow-hidden rounded-full bg-gray-200"
+														>
+															<img
+																src="./images/mock-avatar.svg"
+																alt="avatar"
+															/>
+														</div>
+
+														<p class="font-semibold text-gray-500">Darren B.</p>
+													</div>
+
+													<div class="flex items-center gap-2">
+														<img src="./images/stars.svg" alt="stars image" />
+														<p class="text-sm font-semibold text-yellow-400">
+															5.0
+														</p>
+													</div>
+
+													<p class="text-gray-300">
+														Best gym in Newtown Square, hands down! Amazing
+														coaches, great community, and a fantastic facility.
+													</p>
+												</div>
+											</div>
+										</div>
+										<!-- If we need pagination -->
+										<div class="swiper-pagination"></div>
+									</div>
+								</div>
+							</section>
 						</div>
 						<div
 							class="w-full max-w-[472px] max-xl:max-w-[380px] max-md:hidden"
@@ -119,7 +293,9 @@
 			</main>
 		</div>
 
-		<!-- JS -->
+		<!-- Swiper -->
+		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+		<!-- Custom JS -->
 		<script src="./js/main.js"></script>
 	</body>
 </html>

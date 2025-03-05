@@ -10,9 +10,12 @@
 	/* Colors */
 	--color-primary: #cf3737;
 
-	--color-gray-500: #333333;
-	--color-gray-400: #666666;
+	--color-gray-200: #dddddd;
 	--color-gray-300: #4d4d4d;
+	--color-gray-400: #666666;
+	--color-gray-500: #333333;
+
+	--color-yellow-400: #fdd835;
 }
 
 /* Container max-width & paddings */
@@ -20,6 +23,7 @@
 	@apply mx-auto max-w-[var(--container-max-width)] p-[var(--container-padding)];
 }
 
+/* Base Styles */
 @layer base {
 	h1 {
 		@apply text-5xl leading-normal font-extrabold tracking-[0.96px] text-gray-500 max-lg:text-4xl max-md:text-2xl;
@@ -30,4 +34,15 @@
 	p {
 		@apply tracking-[0.32px] text-gray-400;
 	}
+}
+
+/* Swiper Pagination */
+.swiper-pagination-bullet {
+	width: 12px !important;
+	height: 12px !important;
+	background: var(--color-gray-200) !important;
+	opacity: 1 !important;
+}
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+	background: var(--color-primary) !important;
 }
