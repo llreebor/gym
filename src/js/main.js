@@ -51,3 +51,31 @@ function accordion() {
 	})
 }
 accordion()
+
+// Training Slider & Thumbs
+// Thumbs
+const trainingSliderThumbs = new Swiper(".swiper-training-thumbs", {
+	slidesPerView: 4,
+	spaceBetween: 12,
+	loop: true,
+	touchMoveStopPropagation: false,
+	passiveListeners: false,
+	navigation: {
+		nextEl: ".swiper-training-next",
+		prevEl: ".swiper-training-prev",
+	},
+	breakpoints: {
+		374: {
+			spaceBetween: 16,
+		},
+	},
+})
+// Slider
+new Swiper(".swiper-training", {
+	slidesPerView: 1,
+	spaceBetween: 20,
+	loop: true,
+	thumbs: {
+		swiper: trainingSliderThumbs,
+	},
+})
