@@ -65,7 +65,7 @@ const trainingSliderThumbs = new Swiper(".swiper-training-thumbs", {
 		prevEl: ".swiper-training-prev",
 	},
 	breakpoints: {
-		374: {
+		600: {
 			spaceBetween: 16,
 		},
 	},
