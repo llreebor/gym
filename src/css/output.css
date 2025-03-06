@@ -15,6 +15,8 @@
     --color-gray-300: #4d4d4d;
     --color-gray-400: #666666;
     --color-gray-500: #333333;
+    --color-gray-600: #999999;
+    --color-gray-700: oklch(0.373 0.034 259.733);
     --color-white: #fff;
     --spacing: 0.25rem;
     --text-xs: 0.75rem;
@@ -350,6 +352,9 @@
   .resize {
     resize: both;
   }
+  .grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
   .grid-rows-\[0fr\] {
     grid-template-rows: 0fr;
   }
@@ -421,6 +426,12 @@
       margin-block-end: calc(60px * calc(1 - var(--tw-space-y-reverse)));
     }
   }
+  .gap-x-6 {
+    column-gap: calc(var(--spacing) * 6);
+  }
+  .gap-y-3 {
+    row-gap: calc(var(--spacing) * 3);
+  }
   .overflow-hidden {
     overflow: hidden;
   }
@@ -480,6 +491,9 @@
   .p-6 {
     padding: calc(var(--spacing) * 6);
   }
+  .px-3 {
+    padding-inline: calc(var(--spacing) * 3);
+  }
   .px-4 {
     padding-inline: calc(var(--spacing) * 4);
   }
@@ -495,11 +509,23 @@
   .pt-1 {
     padding-top: calc(var(--spacing) * 1);
   }
+  .pt-2\.5 {
+    padding-top: calc(var(--spacing) * 2.5);
+  }
+  .pt-3 {
+    padding-top: calc(var(--spacing) * 3);
+  }
+  .pb-6 {
+    padding-bottom: calc(var(--spacing) * 6);
+  }
   .pb-12 {
     padding-bottom: calc(var(--spacing) * 12);
   }
   .pb-20 {
     padding-bottom: calc(var(--spacing) * 20);
+  }
+  .pb-\[18px\] {
+    padding-bottom: 18px;
   }
   .text-center {
     text-align: center;
@@ -511,6 +537,10 @@
   .text-xl {
     font-size: var(--text-xl);
     line-height: var(--tw-leading, var(--text-xl--line-height));
+  }
+  .text-xs {
+    font-size: var(--text-xs);
+    line-height: var(--tw-leading, var(--text-xs--line-height));
   }
   .font-medium {
     --tw-font-weight: var(--font-weight-medium);
@@ -590,6 +620,62 @@
       padding-inline: calc(var(--spacing) * 2);
     }
   }
+  .group-hover\:\!bg-gray-50 {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        background-color: var(--color-gray-50) !important;
+      }
+    }
+  }
+  .group-hover\:\!bg-gray-100 {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        background-color: var(--color-gray-100) !important;
+      }
+    }
+  }
+  .group-hover\:\!bg-gray-200 {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        background-color: var(--color-gray-200) !important;
+      }
+    }
+  }
+  .group-hover\:\!bg-gray-700 {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        background-color: var(--color-gray-700) !important;
+      }
+    }
+  }
+  .group-hover\:bg-gray-50 {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        background-color: var(--color-gray-50);
+      }
+    }
+  }
+  .group-hover\:bg-gray-200 {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        background-color: var(--color-gray-200);
+      }
+    }
+  }
+  .group-hover\:bg-primary\/20 {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        background-color: color-mix(in oklab, var(--color-primary) 20%, transparent);
+      }
+    }
+  }
+  .group-hover\:bg-primary\/80 {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        background-color: color-mix(in oklab, var(--color-primary) 80%, transparent);
+      }
+    }
+  }
   .group-\[\.active\]\:rotate-180 {
     &:is(:where(.group):is(.active) *) {
       rotate: 180deg;
@@ -603,6 +689,36 @@
   .group-\[\.active\]\:bg-primary {
     &:is(:where(.group):is(.active) *) {
       background-color: var(--color-primary);
+    }
+  }
+  .group-\[\.active\]\:\!text-white {
+    &:is(:where(.group):is(.active) *) {
+      color: var(--color-white) !important;
+    }
+  }
+  .group-\[\.active\]\:text-white {
+    &:is(:where(.group):is(.active) *) {
+      color: var(--color-white);
+    }
+  }
+  .group-\[\.booked\]\:cursor-not-allowed {
+    &:is(:where(.group):is(.booked) *) {
+      cursor: not-allowed;
+    }
+  }
+  .group-\[\.booked\]\:\!bg-transparent {
+    &:is(:where(.group):is(.booked) *) {
+      background-color: transparent !important;
+    }
+  }
+  .group-\[\.booked\]\:text-gray-500 {
+    &:is(:where(.group):is(.booked) *) {
+      color: var(--color-gray-500);
+    }
+  }
+  .group-\[\.booked\]\:text-gray-600 {
+    &:is(:where(.group):is(.booked) *) {
+      color: var(--color-gray-600);
     }
   }
   .placeholder\:text-\[\#999\] {
@@ -626,6 +742,12 @@
     &::before {
       content: var(--tw-content);
       right: calc(var(--spacing) * -3);
+    }
+  }
+  .before\:\!hidden {
+    &::before {
+      content: var(--tw-content);
+      display: none !important;
     }
   }
   .before\:size-1 {
@@ -665,6 +787,18 @@
       left: calc(var(--spacing) * -3);
     }
   }
+  .after\:\!hidden {
+    &::after {
+      content: var(--tw-content);
+      display: none !important;
+    }
+  }
+  .after\:hidden {
+    &::after {
+      content: var(--tw-content);
+      display: none;
+    }
+  }
   .after\:size-1 {
     &::after {
       content: var(--tw-content);
@@ -684,6 +818,18 @@
       background-color: var(--color-gray-500);
     }
   }
+  .after\:\!bg-none {
+    &::after {
+      content: var(--tw-content);
+      background-image: none !important;
+    }
+  }
+  .after\:bg-none {
+    &::after {
+      content: var(--tw-content);
+      background-image: none;
+    }
+  }
   .hover\:bg-primary\/90 {
     &:hover {
       @media (hover: hover) {
@@ -698,17 +844,19 @@
       }
     }
   }
-  .hover\:text-blue-700\/90 {
-    &:hover {
-      @media (hover: hover) {
-        color: color-mix(in oklab, var(--color-blue-700) 90%, transparent);
-      }
-    }
-  }
   .hover\:underline {
     &:hover {
       @media (hover: hover) {
         text-decoration-line: underline;
+      }
+    }
+  }
+  .group-\[\.booked\]\:hover\:bg-transparent {
+    &:is(:where(.group):is(.booked) *) {
+      &:hover {
+        @media (hover: hover) {
+          background-color: transparent;
+        }
       }
     }
   }
@@ -794,6 +942,11 @@
         margin-block-start: calc(calc(var(--spacing) * 10) * var(--tw-space-y-reverse));
         margin-block-end: calc(calc(var(--spacing) * 10) * calc(1 - var(--tw-space-y-reverse)));
       }
+    }
+  }
+  .max-md\:gap-x-1 {
+    @media (width < 48rem) {
+      column-gap: calc(var(--spacing) * 1);
     }
   }
   .max-md\:p-4 {
