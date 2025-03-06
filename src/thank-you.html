@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en" class="h-full">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+
+		<!-- Styles -->
+		<link rel="stylesheet" href="./css/output.css" />
+
+		<!-- Swiper -->
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+		/>
+
+		<!-- Font -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body class="h-full">
+		<div class="wrapper flex min-h-full flex-col">
+			<!-- Main Content -->
+			<main class="h-full flex-auto">
+				<div class="mx-auto max-w-[650px] px-4 py-20 max-md:py-[60px]">
+					<!-- Header -->
+					<div class="flex flex-col items-center">
+						<img
+							class="size-[100px]"
+							src="./images/thanks-logo.png"
+							alt="logo"
+						/>
+						<h1 class="mt-10 text-center">You’re All Set!</h1>
+						<p class="mt-2 text-center max-md:mt-5">
+							We just sent you a confirmation email at fistname@email.com & a
+							text message to 610-123-4567. Reply to either the email or text
+							message to reach us.
+						</p>
+					</div>
+
+					<!-- List -->
+					<ul class="mt-20 space-y-5 max-md:mt-10">
+						<li class="flex items-start gap-2">
+							<p class="flex w-[108px] shrink-0 items-center gap-2">
+								<img src="./images/thanks-icon-1.svg" alt="icon" />
+								<span class="font-semibold text-red-500">Date:</span>
+							</p>
+							<div class="flex flex-wrap gap-2">
+								<p class="font-medium text-gray-400">03 Mar 2025</p>
+								<a
+									href="#"
+									class="font-medium text-blue-700 underline transition-colors hover:text-blue-700/80"
+								>
+									Add to calendar
+								</a>
+							</div>
+						</li>
+
+						<li class="flex items-start gap-2">
+							<p class="flex w-[108px] shrink-0 items-center gap-2">
+								<img src="./images/thanks-icon-2.svg" alt="icon" />
+								<span class="font-semibold text-red-500">Time:</span>
+							</p>
+							<div class="flex flex-wrap gap-2">
+								<p class="font-medium text-gray-400">09:00 AM</p>
+							</div>
+						</li>
+
+						<li class="flex items-start gap-2">
+							<p class="flex w-[108px] shrink-0 items-center gap-2">
+								<img src="./images/thanks-icon-3.svg" alt="icon" />
+								<span class="font-semibold text-red-500">Coach:</span>
+							</p>
+							<div class="flex flex-wrap gap-2">
+								<p class="font-medium text-gray-400">Kevin</p>
+							</div>
+						</li>
+
+						<li class="flex items-start gap-2">
+							<p class="flex w-[108px] shrink-0 items-center gap-2">
+								<img src="./images/thanks-icon-4.svg" alt="icon" />
+								<span class="font-semibold text-red-500">Location:</span>
+							</p>
+							<div class="flex flex-wrap gap-2">
+								<p class="font-medium text-gray-400">
+									3954 Miller Rd, Newtown Square, PA 19073
+								</p>
+							</div>
+						</li>
+					</ul>
+
+					<!-- Map -->
+					<div class="mt-5">
+						<img src="./images/map.png" alt="map image" />
+					</div>
+				</div>
+			</main>
+		</div>
+
+		<!-- Swiper -->
+		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+		<!-- Custom JS -->
+		<script src="./js/main.js"></script>
+	</body>
+</html>
