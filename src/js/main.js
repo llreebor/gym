@@ -137,3 +137,21 @@ function moveForm() {
 
 moveForm()
 window.addEventListener("resize", moveForm)
+
+// Time Button Toggler
+function timeButtonsHandler() {
+	const buttons = document.querySelectorAll(".time-button")
+
+	buttons.forEach((button) => {
+		button.addEventListener("click", () => {
+			// Проверяем, нет ли у кнопки класса booked
+			if (!button.classList.contains("booked")) {
+				// Удаляем класс active у всех кнопок
+				buttons.forEach((btn) => btn.classList.remove("active"))
+				// Добавляем класс active только кликнутой кнопке
+				button.classList.add("active")
+			}
+		})
+	})
+}
+timeButtonsHandler()
