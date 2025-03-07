@@ -79,3 +79,61 @@ new Swiper(".swiper-training", {
 		swiper: trainingSliderThumbs,
 	},
 })
+
+// Datapicker
+const fp = flatpickr("#datepicker", {
+	dateFormat: "d M Y",
+	defaultDate: new Date(),
+	disableMobile: true,
+	onOpen: function (selectedDates, dateStr, instance) {
+		const overlay = document.querySelector(".datapicker-overlay")
+		const body = document.body
+
+		overlay.classList.add("visible")
+		body.style.overflow = "hidden"
+	},
+
+	onClose: function (selectedDates, dateStr, instance) {
+		const overlay = document.querySelector(".datapicker-overlay")
+		const body = document.body
+		body.style.overflow = ""
+		overlay.classList.remove("visible")
+	},
+})
+
+const plusButtons = document.querySelectorAll(".plus-day")
+const minusButtons = document.querySelectorAll(".minus-day")
+
+function changeDate(days) {
+	const currentDate = fp.selectedDates[0] || new Date()
+	const newDate = new Date(currentDate)
+	newDate.setDate(currentDate.getDate() + days)
+	fp.setDate(newDate)
+}
+
+plusButtons.forEach((plusBtn) => {
+	plusBtn.addEventListener("click", () => changeDate(1))
+})
+
+minusButtons.forEach((minusBtn) => {
+	minusBtn.addEventListener("click", () => changeDate(-1))
+})
+
+// Move Form
+const form = document.querySelector(".form")
+const desktopContainer = document.querySelector(".desktop-container")
+const mobileForm = document.querySelector(".mobile-form")
+let isMoved = false
+
+function moveForm() {
+	if (window.innerWidth < 1280 && !isMoved) {
+		mobileForm.appendChild(form)
+		isMoved = true
+	} else if (window.innerWidth >= 1280 && isMoved) {
+		desktopContainer.appendChild(form)
+		isMoved = false
+	}
+}
+
+moveForm()
+window.addEventListener("resize", moveForm)
